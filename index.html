@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Table Analytics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Data Table Analytics</h1>
+        <input type="text" id="search" placeholder="Search..." onkeyup="filterTable()">
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Name ⬍</th>
+                    <th onclick="sortTable(1)">Email ⬍</th>
+                    <th onclick="sortTable(2)">Age ⬍</th>
+                    <th onclick="sortTable(3)">Country ⬍</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+        <div class="pagination">
+            <button id="prevPage" onclick="prevPage()">Previous</button>
+            <span id="pageNumbers"></span>
+            <button id="nextPage" onclick="nextPage()">Next</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
